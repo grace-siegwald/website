@@ -4,27 +4,27 @@
 */
 :root {
   /* FOR THE BACKGROUNDS */
-    --bg-color: #ffffff;
-    --header-bg: #b7b7b7;
-    --sidebar-bg: #7d7d7d;
-    --content-bg: #5f5f5f;
+    --bg-color: #C89B7B;
+    --header-bg: #CC5A71;
+    --sidebar-bg: #80475E;
+    --content-bg: #CC5A71;
 
     /* FOR THE TEXT */
     --secondary-text: #000000;
-    --text-main: #ff0000;
+    --text-main: #00000;
 
     /* BACKGROUND IMAGES */
-    --bg-image: url('img/mosaic.jpg');
-    --header-bg-image: url('img/carpet.jpg');
-    --main-bg-image: url('img/carpet2.png');
-    --sidebar-bg-image: url('img/carpet.jpg');
+    --bg-image: url('img/textures/yarn.jpg');
+    --header-bg-image: url('');
+    --main-bg-image: url('');
+    --sidebar-bg-image: url('');
   
     /* FONTS */
     --font-header: 'Font2';
     --font-body: 'Font';
   
     /* LITTLE LOGO IMAGE THING */
-    --logo-url: url('img/cat.jpg');
+    --logo-url: url('img/kirby.jpg');
   }
   
 
@@ -34,9 +34,9 @@
 /* THIS IS WHERE THE FONTS R INPUTED */
   @font-face {
     /* this is the KEYWORD the code uses to look ath your font */
-    font-family: 'Font';
+    font-family: 'BirchLeaf';
     /* this is the FILE PATH or the LOCATION of the font file (relative to this css file) */
-    src: url(fonts/GallaeciaForte.ttf);
+    src: url(fonts/BirchLeaf.ttf);
 }  
 @font-face {
     font-family: 'Font2';
