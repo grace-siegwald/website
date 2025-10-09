@@ -33,14 +33,14 @@
 
 /* THIS IS WHERE THE FONTS R INPUTED */
   @font-face {
-    /* this is the KEYWORD the code uses to look ath your font */
+    /* this is the KEYWORD the code uses to look at your font */
     font-family: 'BirchLeaf';
     /* this is the FILE PATH or the LOCATION of the font file (relative to this css file) */
     src: url(fonts/BirchLeaf.ttf);
 }  
 @font-face {
     font-family: 'Font2';
-    src: url(fonts/font2.ttf);
+    src: url(fonts/pixellari.ttf);
 }  
 
 
