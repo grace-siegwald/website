@@ -1,7 +1,8 @@
 
 #walls{
+    background-image: url(textures/sky2.jpg);
     position:absolute;
-    height: 70%;
+    height: 78%;
     width: 100%;
     top: 0%;
     left: 0%;
@@ -10,16 +11,37 @@
 #floor{
     background-image: url(textures/grass.jpg);
     position:absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
+
+#parent{
+    position:absolute;
+    bottom: 30px;
+    right: 55%;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+
 #tree{
-    width: 300px;
-    height: 400px;
-    margin: 200px;
+    position:absolute;
+    left: 40%;
+    bottom: 15%;
+    width: 600px;
+    height: 750px;
+    z-index: 1;
+}
+
+#chair{
+    position: absolute;
+    left: 115%;
+    bottom: 18%;
+    width: 200px;
+    height: 200px;
     z-index: 1;
 }
 
