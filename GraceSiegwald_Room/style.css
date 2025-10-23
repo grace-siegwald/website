@@ -1,6 +1,5 @@
 
 #walls{
-    background-color: #63B0CD;
     position:absolute;
     height: 70%;
     width: 100%;
@@ -18,9 +17,10 @@
     z-index: -1;
 }
 #tree{
-    width: 150px;
-    height: 200px;
-    margin: 20px;
+    width: 300px;
+    height: 400px;
+    margin: 200px;
+    z-index: 1;
 }
 
 body{
