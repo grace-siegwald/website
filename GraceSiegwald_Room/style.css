@@ -1,4 +1,10 @@
 
+
+#title{
+    z-index: 1;
+    font-size: large;
+}
+
 #walls{
     background-image: url(textures/sky2.jpg);
     position:absolute;
@@ -21,25 +27,23 @@
 #parent{
     position:absolute;
     bottom: 30px;
-    right: 55%;
-    width: 500px;
-    height: 500px;
+    right: 75%;
     z-index: 1;
 }
 
 #tree{
     position:absolute;
-    left: 40%;
-    bottom: 15%;
-    width: 600px;
-    height: 750px;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 650px;
     z-index: 1;
 }
 
 #chair{
     position: absolute;
-    left: 115%;
-    bottom: 18%;
+    left: 375px;
+    bottom: 0;
     width: 200px;
     height: 200px;
     z-index: 1;
