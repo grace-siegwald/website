@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        section {
+            /* padding is adding space "around" the text. 
+            80 pixels above and below, 
+
+
+
+            it has 
+            boarders 2 px around
+            border again
+            border again
+
+            images 
+            texts below the images 
+
+            backgroung image 
+
+            more images 
+
+
+
+
+            20 pixels on the right and left */
+            padding: 80px 20px;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav {
+            background-color: #444;
+            position: sticky;
+            top: 0%;
+            z-index: 10;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5em 1em;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+
+        .hamburger{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px){
+            .hamburger {display: flex};
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                width: 100%;
+            }
+            .nav-links.show { display: flex; }
+        }
+    </style>
+</head>
+
+<body>  
+    <header>
+        <h1>
+            Responsive Design Website !!!
+        </h1>
+    </header>
+    
+    <!-- semantics, a bunch of links to jump around site, helpful for sorting code -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-title">
+                MySite
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+            <div class="nav-links">
+                <a href="#section1">Home</a>
+                <a href="#section2">About</a>
+                <a href="#section3">Services</a>
+                <a href="#section4">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!--differentiates between pages-->
+    <main>
+        <!-- Sections help differentaiate the sections of
+         your website in code, but they don't
+         change anything visually... -->
+        <section id="section1">
+            <h2>
+                Home
+            </h2>
+            <p>
+                Welcome to the home section!
+            </p>
+        </section>
+
+        <section id="section2">
+            <h2>
+                About
+            </h2>
+            <p>
+                All about meeeee
+            </p>
+        </section>
+
+        <section id="section3">
+            <h2>
+                Services
+            </h2>
+            <p>
+                Here's what I offer!
+            </p>
+        </section>
+
+        <section id="section4">
+            <h2>
+                Contact
+            </h2>
+            <p>
+                Here's where to contact me!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        C 2025 Grace's Website
+    </footer>
+</div>
+</body>
+<script>
+    // FIX 1: Corrected method name to getElementById
+    const hamburger = document.getElementById('hamburger');
+    // FIX 2: Corrected selector to use the class name '.nav-links'
+    const navLinks = document.querySelector('.nav-links');
+
+    // FIX 3: Added the essential event listener to toggle the menu
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    // Existing functionality: Close the menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('show'))
+    });
+</script>
+</html>
