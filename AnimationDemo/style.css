@@ -1,0 +1,25 @@
+.image-container {
+    position: relative;
+    width: 600px; /* this is defining the size of the image */
+    height: 500px; /* this is defining the size of the image *//* */
+    overflow: hidden;
+    /* Center horizontally */
+    margin: 0 auto;
+    /* Center vertically as well */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* this is how fast the images change - you can make the numebr larger for a long fade and shorter so the images just switch */
+}
+
+.image-container img.active {
+    opacity: 1;
+}

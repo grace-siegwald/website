@@ -1,0 +1,96 @@
+body{
+    background-image: url("background-images/SB149.JPG");
+}
+
+#head {
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    z-index: 1;
+}
+
+#beak{
+
+}
+
+#left-foot, #right-foot{
+    width: 75px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    top: 80%;
+    position: absolute;
+}
+#left-foot{
+    left: 40%;
+}
+#right-foot{
+    left: 50%;
+}
+
+
+#body {
+    width: 400px;
+    height: 425px;
+    background-image: url("background-images/ST180.JPG");
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    left: 36%;
+    z-index: 0;
+}
+
+#left-eye, #right-eye{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 22%;
+    z-index: 2;
+}
+
+#left-eye{
+    left: 47%;
+}
+
+#right-eye{
+    left: 50%;
+}
+
+#left-wing, #right-wing{
+    width: 100px;
+    height: 310px;
+    background-color: lightcoral;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+}
+#left-wing{
+    left: 32%;
+    transform: rotate(40deg);
+}
+#right-wing{
+    left: 60%;
+    transform: rotate(-40deg);
+}
+
+.turkey:hover{
+    #body, #head, #left-eye, #right-eye, #left-foot, #right-foot, #right-wing, #left-wing {
+        transform: translateY(-50px);
+    }
+    #left-wing{
+        transform: rotate(60deg);
+        left: 30%;
+        top: 33%;
+    }
+    #right-wing{
+        transform: rotate(-60deg);
+        left: 62%;
+        top: 33%;
+    }
+}
