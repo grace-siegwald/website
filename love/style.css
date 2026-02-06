@@ -1,0 +1,14 @@
+img{
+    display: none;
+}
+
+h1{
+    background-color:deeppink;
+    color: burlywood;
+}
+
+body{
+    background-color: deepskyblue;
+    background-image: url(img/CLOUD09J.GIF);
+}
+
