@@ -1,17 +1,66 @@
 h1 {
-    font-size: 50px;
+    font-size: 80px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
     padding: 5px;
     border: 2px, ridge, brown;
+    font-family: 'pixel';
+    rotate: -8deg;
+    margin: 30px;
+    animation-name: 'rainbow'; 
+    animation: rainbow infinite;
+
+
 }
+
+@keyframes rainbow {
+    0%{
+    color: blue;
+    }
+    50%{
+    color: green;
+    }
+    100%{
+    color: yellow;
+}
+}
+
 h2 {
     margin: 5px;
+}
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('backstar.gif');
+    color: aliceblue;
+
+}
+body * {
+    margin: 20px;
 }
 
 #link-container {
     flex-direction: column;
     display: flex;
+}
+
+@font-face {
+    font-family: 'kiwi';
+    src: url(KiwiSoda.ttf);
+}
+
+@font-face {
+    font-family: 'emoji';
+    src: url(EmojiFont.ttf);
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url(PixeloutPersonalUseOnly.ttf);
 }
 
 #content-container{
@@ -20,12 +69,18 @@ h2 {
     margin-left: 60%;
     margin-bottom: 40px;
     border: 7px, solid, black;
+    font-family: 'emoji';
 }
+
 
 a {
     margin: 20px;
     margin-right: 70%;
+    color: palevioletred;
     border: 5px, ridge, black;
+    font-family: 'kiwi';
 }
 
-
+a:hover{
+    color: darkmagenta;
+}
