@@ -1,0 +1,28 @@
+:root {
+    --pink-frost: #E4B7E5;
+
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url(fonts/JMH\ Typewriter.ttf);
+}
+
+body {
+    background-color: var(--pink-frost);
+}
+
+#link_container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+}
+
+a {
+    border: 6px ridge blue;
+    padding: 30px;
+    font-family: CustomFont;
+}
