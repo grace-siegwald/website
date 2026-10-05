@@ -1,0 +1,16 @@
+#pumpkin{
+    width: 100%;
+}
+.eyes{
+    width: 100%;
+    display: none;
+}
+.mouth{
+    display: none;
+}
+.nose{
+    display: none;
+}
+.visible{
+    display: block;
+}
