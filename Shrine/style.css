@@ -1,0 +1,35 @@
+body{
+    background-image: url("cloudy.gif");
+}
+
+header, main, aside, section{
+    border: groove cornsilk 4px;
+    padding: 100px;
+}
+
+header{
+    font-family: cloudyFont;
+    font-size: large;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+aside{
+    width: 30%;
+    background-image: url(flowerBackground.gif);
+}
+section{
+    width: 70%;
+}
+
+@font-face {
+  font-family: cloudyFont;
+  src: url(Daydream.otf);
+}
+
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/angel-wing-star-2873bcf8-70.webp') 47 45, auto !important;
+}
