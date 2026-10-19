@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'bot';
+    src: url(fonts/bot.ttf);
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url(fonts/king.ttf);
+}
+@font-face {
+    font-family: 'fantasy';
+    src: url(fonts/fantasy.ttf);
+}
+
+img {
+    border-style: dotted;
+    width: 200px;
+    height: 200px;
+    transform-origin: 50%;
+    margin-left: 0%;
+}
+
+p {
+    font-size: large;
+}
+
+body {
+    font-family: 'typewriter', monospace;
+    background-image: url(bubbles.jpg);
+}
+
+header {
+    text-align: center;
+    font-family: fantasy;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+a:hover {
+    font-family: 'bot', monospace;
+}
+
+button {
+    font-family: 'typewriter', monospace;
+    background-color: #ffffff;
+    border: solid;
+    color: rgb(0, 0, 0);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-family: 'bot', monospace;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.story {
+    /* IS NOT DISPLAYED */
+    display: none;
+}
+
+.story.active {
+    /* IS DISPLAYED */
+    display: block;
+}

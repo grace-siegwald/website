@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Bibble Angry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let score = 0;
+
+        // is it a good or bad choice?
+        function posChoice(points) {
+            score += points;
+        }
+        function negChoice(points) {
+            score -= points;
+        }
+
+        // go to a scene by id=""
+        function goToScene(sceneIdThatIEntered) {
+                              // get thing where class="story"
+            const allMyScenes = document.querySelectorAll('.story');
+            allMyScenes.forEach(sceneOfWhichIHaveMade => {
+                // hide all stories to start
+                sceneOfWhichIHaveMade.classList.remove('active');
+            });
+
+            const sceneIwant2Go2 = document.getElementById(sceneIdThatIEntered);
+            // if sceneIwant2Go2 exists
+            if (sceneIwant2Go2) {
+                // let it appear!
+                sceneIwant2Go2.classList.add('active');
+            }
+        }
+
+        // use the number (score) to direct da people
+        function goToEnding() {
+            if (score >= 1) {
+                goToScene('goodEnding');
+            }  
+            else if (score === 0) {
+                goToScene('neutralEnding');
+            }
+            else {
+                goToScene('badEnding');
+            }
+        }
+
+        // when the page loads, go to the intro scene
+        document.addEventListener('DOMContentLoaded', () => {
+            goToScene('intro');
+        });
+    </script>
+
+    <!-- HEADER AND NAV -->
+    <!-- HEADER AND NAV -->
+    <header>
+        <h1>Make Bibble Angry</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Restart</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <!-- HEADER AND NAV -->
+    <!-- HEADER AND NAV -->
+
+
+    <!-- CONTAINER I MADE UNDER HEADER AND NAV -->
+         <!-- CONTAINER UNDER HEADER AND NAV -->
+    <!-- CONTAINER UNDER HEADER AND NAV -->
+    <main>
+        <!-- MY INTRO -->
+        <section id="intro" class="story active">
+            <h2>Intro</h2>
+            <figure>
+                <img src="bibble-sad.jpg" alt="King George" width="300">
+                <figcaption>This is Bibble.</figcaption>
+            </figure>
+            <p>Bibble is a fairy (you think?). Very weird looking. We kinda hate him. Make him angry.</p>
+            <button onclick="goToScene('step1'); ">SAY HI</button>
+        </section>
+
+
+        <!-- MY STORY THINGIES -->
+        <section id="step1" class="story">
+            <h2>_____________________</h2>
+            <figure>
+                <img src="bibble-happy.webp" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Bibble says hi to you. He smiles. You hate it</p>
+            <button onclick="goToScene('step2');">Ask if he's a fairy</button>
+            <button onclick="goToScene('step2'); negChoice(1);">Give him the trash</button>
+            <button onclick="goToScene('step2'); posChoice(1);">Insult his hair</button>
+        </section>
+        <section id="step2" class="story">
+            <h2>_____________________</h2>
+            <figure>
+                <img src="bibble-think.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Bibble doesn't know what to think of this interaction. He just met you and you are weird.</p>
+            <button onclick="goToEnding(); posChoice(1)">Insult his nubs</button>
+            <button onclick="goToEnding(); negChoice(1)">Give him more trash</button>
+            <button onclick="goToEnding();">Hug</button>
+        </section>
+
+
+
+        <!-- MY ENDINGS -->
+        <section id="goodEnding" class="story">
+            <h2>Good Ending</h2>
+            <figure>
+                <img src="bibble-angry.webp" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Bibble is ANGRY. Sucess.</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+        <section id="neutralEnding" class="story">
+            <h2>Neutral Ending</h2>
+            <figure>
+                <img src="bibble-neutral.jpg" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Bibble is just confused. You confused him. That's fine I guess</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+        <section id="badEnding" class="story">
+            <h2>Bad Ending</h2>
+            <figure>
+                <img src="bibble-happy.webp" alt="King George" width="300">
+                <figcaption>...</figcaption>
+            </figure>
+            <p>Bibble loves trash. LOVES trash. He's happy. You failed</p>
+            <button onclick="goToScene('intro'); score = 0;">Play Again</button>
+        </section>
+    </main>
+
+
+
+
+    <!-- END OF BODY (website) -->
+</body>
+</html>
