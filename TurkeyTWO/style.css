@@ -1,0 +1,119 @@
+body{
+    background-image: url("Background.gif");
+}
+#Turkey{
+    Width: 500px;
+    Height: 600px;
+
+    Position: relative;
+    Left: 10%;
+    Top: 20%;
+}
+
+#Turkey:hover{
+    #WingLeft{
+        rotate: 400deg;
+        top: 20%;
+    }
+    #WingRight{
+        rotate: -400deg;
+        Top: 20%;
+        animation: 1s ease-in-out;
+    }
+    #LegLeft{
+        rotate: 20deg;
+        top: 75%;
+        left: 20%;
+    }
+    #LegRight{
+        rotate: -20deg;
+        top: 75%;
+        left: 68%;
+    }
+    #Egg{
+        display: block;
+    }
+}
+
+#Egg{
+    Width: 100px;
+    Height: 150px;
+    Background-color: white;
+    border-radius: 50%;
+
+    display: none;
+
+    Position: absolute;
+    Left: 45%;
+    Top: 80%;
+    z-index: 0;
+    rotate: 20deg;
+    transform-origin: top center;
+}
+
+
+#Body{
+    Width: 250px;
+    Height: 400px;
+    Background-color: black;
+    border-radius: 50%;
+
+    Position: absolute;
+    Left: 30%;
+    Top: 20%;
+    z-index: 1;
+}
+
+#Head{
+    Width: 150px;
+    Height: 200px;
+
+    Position: absolute;
+    Left: 35%;
+    Top: 0%;
+    z-index: 2;
+}
+
+#WingLeft{
+    Width: 200px;
+    Height: 200px;
+
+    Position: absolute;
+    Left: -6%;
+    Top: 30%;
+    z-index: 2;
+
+    rotate: 10deg;
+}
+
+#WingRight{
+    Width: 200px;
+    Height: 200px;
+
+    Position: absolute;
+    Left: 77%;
+    Top: 30%;
+    z-index: 2;
+    
+    rotate: -10deg;
+}
+
+#LegLeft{
+    Width: 100px;
+    Height: 200px;
+
+    Position: absolute;
+    Left: 25%;
+    Top: 75%;
+    z-index: 0;
+}
+
+#LegRight{
+    Width: 100px;
+    Height: 200px;
+
+    Position: absolute;
+    Left: 63%;
+    Top: 75%;
+    z-index: 0;
+}
